@@ -5,7 +5,7 @@
     /// </summary>
     public interface IMapItem
     {
-        public int LinkId { get; set; }
+        public string LinkCode { get; set; }
         public string SourceValue { get; set; }
         public string TargetValue { get; set; }
     }

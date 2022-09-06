@@ -4,7 +4,7 @@ namespace common_mapping.Models
 {
     public class MapItem : IMapItem
     {
-        public int LinkId { get; set; }
+        public string LinkCode { get; set; }
         public string SourceValue { get; set; }
         public string TargetValue { get; set; }
 
@@ -13,14 +13,14 @@ namespace common_mapping.Models
 
         }
 
-        public MapItem(int linkId, string sourceValue, string targetValue = "")
+        public MapItem(string linkCode, string sourceValue, string targetValue = "")
         {
-            (LinkId, SourceValue, TargetValue) = (linkId, sourceValue, targetValue);
+            (LinkCode, SourceValue, TargetValue) = (linkCode, sourceValue, targetValue);
         }
 
         public override string ToString()
         {
-            return $"{LinkId}: {SourceValue} => {TargetValue}";
+            return $"{LinkCode}: {SourceValue} => {TargetValue}";
         }
     }
 }

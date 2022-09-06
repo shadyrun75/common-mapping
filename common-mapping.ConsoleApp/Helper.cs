@@ -11,9 +11,10 @@
             Console.ResetColor();
         }
 
-        public static Int32 GetId()
+        public static Int32 GetId(string message = "")
         {
             Int32 id = 0;
+            Console.Write(message);
             string temp = Console.ReadLine();
             if (!Int32.TryParse(temp, out id))
                 throw new Exception($"ERROR! '{temp}' is not integer value!");
@@ -44,6 +45,13 @@
                 }
                 Console.WriteLine($"Unkown command '{key}'");
             }            
+        }
+
+        public static string GetValue(string source)
+        {
+            Console.Write(source);
+            var sourceValue = Console.ReadLine();
+            return sourceValue;
         }
     }
 }

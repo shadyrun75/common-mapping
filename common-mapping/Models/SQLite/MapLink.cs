@@ -1,30 +1,8 @@
-﻿using common_mapping.Interfaces;
-
-namespace common_mapping.Models.SQLite
+﻿namespace common_mapping.Models.SQLite
 {
-    internal class MapLink : IMapLink
+    internal class MapLink
     {
-        public int Id { get; set; }
-        public int SourceId { get; set; }
-        public int TargetId { get; set; }
-        public virtual MapType? Source { get; set; }
-        public virtual MapType? Target { get; set; }
-
-        public MapLink()
-        {
-
-        }
-
-        public MapLink(IMapLink value)
-        {
-            Id = value.Id;
-            SourceId = value.SourceId;
-            TargetId = value.TargetId;
-        }
-
-        public override string ToString()
-        {
-            return $"[LinkId {Id}] {SourceId} => {TargetId}";
-        }
+        public Int32 Id { get; set; }
+        public string Code { get; set; }
     }
 }
